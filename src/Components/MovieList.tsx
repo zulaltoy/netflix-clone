@@ -1,18 +1,18 @@
-import React from 'react'
-import MovieCard from './MovieCard';
-import type { MovieListProps, Movie } from './types';
+import React from "react";
+import MovieCard from "./MovieCard";
+import type { MovieListProps, Movie } from "./types";
 const MovieList = ({ movies }: MovieListProps) => {
   return (
-    <div>
-        <ul>
-      { movies.map((movie: Movie) => (
-        <li key={movie.id}>
-          <MovieCard movie={movie} />
-        </li>
-      ))}
+    <div className="relative">
+      <ul className="flex overflow-x-scroll overflow-y-visible space-x-4 px-4 md:px-6 py-4 scrollbar-hide relative ">
+        {movies.map((movie: Movie) => (
+          <li key={movie.id}>
+            <MovieCard movie={movie} />
+          </li>
+        ))}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default MovieList
+export default MovieList;
