@@ -6,12 +6,14 @@ import Movies from './Components/TrendingNow'
 function App() {
 
   return (
-    <>
-      <Header />
-      <Hero />
-      <Movies />
-    </>
-  )
+    <main>
+      <div className='min-h-screen bg-background text-foreground transition-colors duration-300'>
+        <Header />
+        <Hero />
+        <Movies />
+      </div>
+    </main>
+  );
 }
 
 export default App
